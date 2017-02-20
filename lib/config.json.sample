@@ -27,6 +27,7 @@
   },
   "mqtt": { "serverUrl": "mqtt:10.1.1.186:1883",
             "requestTopic": "sipBroker/request",
+            "responseTopic": "sipBroker/response",
             "cancelTopic": "sipBroker/cancel"
            },
   "connections": { "dawsons": { "dest": "XXXXXXXXXX" },
