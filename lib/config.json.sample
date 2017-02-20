@@ -1,0 +1,41 @@
+{
+  "title": "Message Waiting",
+  "windowSize": { "x": 300, "y": 300 },
+  "serverPort": 13000,
+  "sipster": {
+    "epconfig": {
+      "logConfig": { "msgLogging": 0,
+                     "consoleLevel": 0,
+                     "level": 0}
+    },
+    "sip": {
+      "idUri": "sip:XXXXXXXXXXXXX@XXXXXXXXXXXXXXXXX",
+      "regConfig": { "registrarUri": "sip:XXXXXXXXXXXXX@XXXXXXXXXXXXXXXXX",
+                     "registerOnAdd": true,
+                     "timeoutSec": 120
+                 },
+      "mwiConfig": { "enabled": true,
+                     "expirationSec": 300 },
+      "sipConfig": { "authCreds": [{ "scheme": "digest",
+                                     "realm": "XXXXXXXXXXXXXXXXX",
+                                     "username": "XXXXXXXXXXXXX",
+                                     "dataType": 0,
+                                     "data": "XXXXXXXXX"
+                                   }]
+                   }
+    }
+  },
+  "mqtt": { "serverUrl": "mqtt:10.1.1.186:1883",
+            "requestTopic": "sipBroker/request",
+            "cancelTopic": "sipBroker/cancel"
+           },
+  "connections": { "dawsons": { "dest": "XXXXXXXXXX" },
+                   "michael": { "dest": "XXXXXXXXXX" }
+                 },
+  "sources": { "default": "XXXXXXXXXX",
+               "home": "XXXXXXXXXX",
+               "michael": "XXXXXXXXXX"
+             },
+  "relay": "XXXXXXXXXXXXXXXXX",
+  "eventLogPrefix": "/home/user1/repo/sipCallBroker"
+}
